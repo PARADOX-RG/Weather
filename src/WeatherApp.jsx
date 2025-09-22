@@ -8,9 +8,8 @@ function WeatherApp() {
     const [cities, setCities] = useState([]);
     const [suggestions, setSuggestions] = useState([]);
     const [error, setError] = useState("");
-    const [currentBg, setCurrentBg] = useState("bg-default"); // фон
+    const [currentBg, setCurrentBg] = useState("bg-default");
 
-    // Отримати підказки міст
     const fetchSuggestions = async (input) => {
         if (!input) {
             setSuggestions([]);
@@ -27,7 +26,6 @@ function WeatherApp() {
         }
     };
 
-    // Отримати погоду
     const getWeather = async (cityName) => {
         try {
             const res = await fetch(
@@ -39,13 +37,12 @@ function WeatherApp() {
             setQuery("");
             setSuggestions([]);
             setError("");
-            updateBackground(data.weather[0].main); // оновити фон
+            updateBackground(data.weather[0].main);
         } catch (err) {
             setError(err.message);
         }
     };
 
-    // Оновити фон по погоді
     const updateBackground = (weatherMain) => {
         switch (weatherMain.toLowerCase()) {
             case "clear":
@@ -110,7 +107,7 @@ function WeatherApp() {
                         <div
                             className="col-md-4 mb-4"
                             key={weather.id}
-                            onClick={() => updateBackground(weather.weather[0].main)} // клік по картці змінює фон
+                            onClick={() => updateBackground(weather.weather[0].main)}
                         >
                             <div className="card shadow-sm cursor-pointer">
                                 <div className="card-body">
