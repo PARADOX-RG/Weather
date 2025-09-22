@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bg-clear {
+  background: url('https://images.unsplash.com/photo-1501973801540-537f08ccae7c?auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+  background-size: cover;
+}
+
+.bg-clouds {
+  background: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+  background-size: cover;
+}
+
+.bg-rain {
+  background: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+  background-size: cover;
+}
+
+.bg-snow {
+  background: url('https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+  background-size: cover;
+}
+
+.bg-default {
+  background: linear-gradient(to bottom, #00c6ff, #0072ff);
+}
+
